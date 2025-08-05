@@ -15,6 +15,16 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+a {
+    color: #005f73;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #fca311;
+    text-decoration: underline;
+}
+
 /* --- 头部样式 --- */
 .site-header {
     background-color: #005f73; /* 专业蓝 */
@@ -27,6 +37,11 @@ body {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
+.site-header p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* --- 导航栏样式 --- */
 .main-nav {
     background-color: #004c5d;
@@ -34,22 +49,26 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .main-nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* 移动端换行 */
 }
 .main-nav ul li a {
     color: #ffffff;
-    text-decoration: none;
     padding: 0.5rem 1.5rem;
     transition: background-color 0.3s;
+    display: block;
 }
 .main-nav ul li a:hover {
     background-color: #007f8d;
     border-radius: 5px;
+    text-decoration: none;
 }
+
 /* --- 主要内容区样式 --- */
 .main-content {
     padding: 3rem 0;
@@ -57,6 +76,9 @@ body {
 .intro-section {
     text-align: center;
     margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .intro-section h2 {
     font-family: 'Noto Serif SC', serif;
@@ -64,7 +86,8 @@ body {
     color: #005f73;
     margin-bottom: 1rem;
 }
-/* --- 疾病卡片样式 --- */
+
+/* --- 卡片样式 --- */
 .disease-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,29 +100,39 @@ body {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 .card h3 {
     color: #005f73;
     margin-bottom: 0.5rem;
 }
 .card p {
-    flex-grow: 1; /* 让段落填充空间，使链接保持在底部 */
+    flex-grow: 1;
     margin-bottom: 1rem;
+    color: #555;
 }
 .card-link {
     color: #fca311; /* 警示橙 */
-    text-decoration: none;
     font-weight: bold;
     align-self: flex-start;
 }
-.card-link:hover {
-    text-decoration: underline;
-}
+
 /* --- 页脚样式 --- */
 .site-footer {
     background-color: #333;
     color: #aaa;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     margin-top: 3rem;
+    font-size: 0.9rem;
+}
+.site-footer p {
+    line-height: 1.8;
+}
+.site-footer a {
+    color: #fca311;
 }
