@@ -1,0 +1,105 @@
+/* --- 全局重置与基础设定 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.7;
+    background-color: #f4f7f6;
+    color: #333;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* --- 头部样式 --- */
+.site-header {
+    background-color: #005f73; /* 专业蓝 */
+    color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+}
+.site-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+/* --- 导航栏样式 --- */
+.main-nav {
+    background-color: #004c5d;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s;
+}
+.main-nav ul li a:hover {
+    background-color: #007f8d;
+    border-radius: 5px;
+}
+/* --- 主要内容区样式 --- */
+.main-content {
+    padding: 3rem 0;
+}
+.intro-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.intro-section h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.2rem;
+    color: #005f73;
+    margin-bottom: 1rem;
+}
+/* --- 疾病卡片样式 --- */
+.disease-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card h3 {
+    color: #005f73;
+    margin-bottom: 0.5rem;
+}
+.card p {
+    flex-grow: 1; /* 让段落填充空间，使链接保持在底部 */
+    margin-bottom: 1rem;
+}
+.card-link {
+    color: #fca311; /* 警示橙 */
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
+/* --- 页脚样式 --- */
+.site-footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
